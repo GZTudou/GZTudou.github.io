@@ -10,7 +10,7 @@ keywords:
 rss:
 
 # Specify the date when the site was setup
-since: 2011
+since: 2016
 
 
 
@@ -52,7 +52,8 @@ swiftype_key:
 
 
 # Baidu Analytics ID
-baidu_analytics: ''
+#baidu_analytics: ''
+tencent_analytics: '58346165'
 # Google Analytics
 #google_analytics: 'UA-19053680-8'
 
@@ -62,7 +63,7 @@ baidu_analytics: ''
 # #'https://nzw3d6nir.qnssl.com/images/embed.min.js'
 # https://static.duoshuo.com/embed.js
 duoshuo:
-  shortname: ''
+  shortname: 'coderlmm'
   js_src: ''
 # Disqus
 #disqus_shortname:
@@ -75,7 +76,6 @@ google_site_verification: ''
 baidu_site_verification: ''
 
 
-highlight_theme: night blue
 
 gplus:
 
