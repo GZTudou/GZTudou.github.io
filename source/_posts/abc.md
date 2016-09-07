@@ -9,7 +9,37 @@ comments: false
 ### Create a new post
 
 ``` 
-$ hexo new "My New Post"
+package main;
+
+public class HttpUtil {
+
+	public static String doPost(String url,Map<String,String> map) throws Exception {
+		String uriAPI = url;// Post方式没有参数在这里
+		String result = "";
+		HttpPost httpRequst = new HttpPost(uriAPI);// 创建HttpPost对象
+		List params = new ArrayList();
+		
+		Set<Entry<String, String>> entrys=map.entrySet();
+		Iterator<Entry<String, String>> it=entrys.iterator();
+		while(it.hasNext()){
+			Entry<String, String> e=it.next();
+			params.add(new BasicNameValuePair(e.getKey(),e.getValue()));
+		}
+		
+			httpRequst.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+			HttpResponse httpResponse = new DefaultHttpClient()
+					.execute(httpRequst);
+			if (httpResponse.getStatusLine().getStatusCode() == 200) {
+				HttpEntity httpEntity = httpResponse.getEntity();
+				result = EntityUtils.toString(httpEntity);// 取出应答字符串
+			}
+		
+		return result;
+	}
+
+}
+
+
 ```
 
 More info: [Writing](https://hexo.io/docs/writing.html)
