@@ -1,10 +1,9 @@
 ---
 title: about
 date: 2016-09-06 23:51:57
-
+comments: false
 ---
 
-# This is my guestbook!
+# This is my information page!
 <br/>
-# Please feel free to leave a comment here.
 <hr/>
